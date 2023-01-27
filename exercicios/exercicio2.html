@@ -1,0 +1,43 @@
+<h1>Listas</h1>
+
+<!------------LISTA ORDENADA------------->
+<h2>Aprovados</h2>
+<ol>
+  <li>Bia</li>
+  <li>João</li>
+  <li>Pedro</li>
+</ol>
+
+<!------------LISTA NÃO ORDENADA------------->
+<h2>Compras</h2>
+<ul>
+  <li>Arroz</li>
+  <li>Pão</li>
+  <li>Carne</li>
+</ul>
+
+<!------------LISTA ANINHADA------------->
+<h2>Compras</h2>
+<ul>
+  <li>Arroz</li>
+  <li>F1</li>
+  <li>
+    <span wm-folder>Frutas</span>
+      <ul>
+        <li> Maca</li>
+        <li>Banana</li>
+      </ul>
+  </li>
+  <li>Carne</li>
+</ul>
+
+<script>
+  document.querySelectorAll('[wm-folder]').forEach(folder => {
+    folder.onClick = function(e) {
+      console.log('Teste');
+      const ul = folder.nextElementSibling
+      const exibth = ul.style.display
+      ul.style.display = exibth === 'none' ? 'block' : 'none'
+    }
+  })
+</script>
