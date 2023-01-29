@@ -1,5 +1,5 @@
 <h1>Formulario</h1>
-<form action="https//localhost:3030/usuarios" method="POST">
+<form method="POST">
   <input type="text" name="nome">
   <input type="password" name="senha">
   <textarea name="bio" cols="30" row="10"></textarea>
@@ -30,7 +30,8 @@
     <option value="C">C</option>
   </select>
 
-  <button>Incluir</button>
+  <button action="https//localhost:3030/usuarios" frommethod="POST">Incluir</button>
+  <button action="https//localhost:3030/usuarios/3" frommethod="PUT">Alterar</button>
 </form>
 
 <style>
